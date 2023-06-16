@@ -9,7 +9,7 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect option \n1.Duplicate Elements in array \n2.Unique Element in array " +
-                    "\n3.Frequency of Elements in array \n4.Pattern Print \n5.Print Pattern \n6.Exit");
+                    "\n3.Frequency of Elements in array \n4.Pattern Print \n5.Print Pattern \n6.Sum of digits \n7.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -42,6 +42,10 @@
                     case 5:
                         PrintPattern printPattern = new PrintPattern();
                         printPattern.Print1();
+                        break;
+                    case 6:
+                        SumOfDigits sumOfDigits = new SumOfDigits();
+                        sumOfDigits.Sum();
                         break;
                     default:
                         flag = false;
