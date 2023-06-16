@@ -8,7 +8,8 @@
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("\nSelect option \n1.Duplicate Elements in array \n2.Unique Element in array \n3.Exit");
+                Console.WriteLine("\nSelect option \n1.Duplicate Elements in array \n2.Unique Element in array " +
+                    "\n3.Frequency of Elements in array \n4.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -23,6 +24,16 @@
                         int[] arr1 = { 1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 8, 9 };
                         Console.WriteLine("Unique elements in the array:");
                         uniqueElements.PrintUniqueElements(arr1);
+                        break;
+                    case 3:
+                        FrequencyElements frequencyElements = new FrequencyElements();  
+                        int[] arr2 = { 1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 8, 8, 9 };
+                        Dictionary<int, int> frequencyMap = frequencyElements.CountElementFrequency(arr2);
+                        Console.WriteLine("Element\tFrequency");
+                        foreach (KeyValuePair<int, int> kvp in frequencyMap)
+                        {
+                            Console.WriteLine(kvp.Key + "\t" + kvp.Value);
+                        }
                         break;
                     default:
                         flag = false;
