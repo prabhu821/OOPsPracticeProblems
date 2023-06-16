@@ -9,7 +9,7 @@
             while (flag)
             {
                 Console.WriteLine("\nSelect option \n1.Duplicate Elements in array \n2.Unique Element in array " +
-                    "\n3.Frequency of Elements in array \n4.Exit");
+                    "\n3.Frequency of Elements in array \n4.Pattern Print \n5.Exit");
                 int options = Convert.ToInt32(Console.ReadLine());
                 switch (options)
                 {
@@ -34,6 +34,10 @@
                         {
                             Console.WriteLine(kvp.Key + "\t" + kvp.Value);
                         }
+                        break;
+                    case 4:
+                        PatternPrint patternPrint = new PatternPrint();
+                        patternPrint.Print();
                         break;
                     default:
                         flag = false;
